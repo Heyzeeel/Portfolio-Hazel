@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hazel Blog - Week 02</title>
+    <title>Hazel Blog - Week 01</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -53,43 +53,46 @@
 			</div>
 		</aside>
         <div id="colorlib-main">
-            <div class="hero-wrap" style="background-image: url(images/week2.2.jpg);">
+            <div class="hero-wrap" style="background-image: url(images/day1.jpg);">
                 <div class="overlay"></div>
                 <div class="hero-text">
-                    <h2><span class="category mb-1 d-block"><a href="#">Week 02</a></span></h2>
-                    <h1 class="mb-4">Deep Dive into AWS Services</h1>
-                    <p class="meta"><span>February 10 - 14, 2025</span></p>  
+                    <h2><span class="category mb-1 d-block"><a href="#">Week 01</a></span></h2>
+                    <h1 class="mb-4">AWS, Next.js and Tailwind CSS</h1>
+                    <p class="meta"><span>February 3 - 7, 2025</span></p>  
                 </div>
             </div>
             <section class="ftco-section article-container">
               <div class="container">
                   <div class="content">
-                      <p>In the second week of my training at StraStan Solutions Corps, I continued working on the Marketplace project, focusing on key functionalities in the Cards module, Messaging and Content module, Notification System, and encryption and decryption tasks.</p>
+                      <p>The first week covered AWS-CDK fundamentals, including project setup, key concepts, and hands-on labs. Participants learned about infrastructure as code, debugging, and best practices for managing cloud resources. They also worked with AWS services such as Cognito for authentication, Lambda for serverless computing, DynamoDB for NoSQL databases, and SQS for message queuing. The week concluded with a hands-on lab where trainees built and deployed applications using AWS-CDK.</p>
           
                       <!-- Image Slideshow -->
                       <div class="image-slider owl-carousel">
-                          <img src="images/week2.1.jpg" alt="Article Image" class="img-fluid">
-                          <img src="images/week2.2.jpg" alt="AWS Cloud" class="img-fluid">
-                          <img src="images/week2.3.jpg" alt="AWS Cloud" class="img-fluid">
-                          <img src="images/week2.4.jpg" alt="AWS Cloud" class="img-fluid">
+                          <img src="images/day1_1.jpg" alt="Article Image" class="img-fluid">
+                          <img src="images/task.jpg" alt="AWS Cloud" class="img-fluid">
+                          <img src="images/day1_3.jpg" alt="AWS Cloud" class="img-fluid">
+                          <img src="images/day1_5.jpg" alt="AWS Cloud" class="img-fluid">
                       </div>
           
-                      <p>I successfully completed the Cards module by implementing the createCard and reviewListing Lambda functions. These functions interact with existing DynamoDB tables, ensuring that all card-related data is accurately stored and managed without 
-                        creating new tables, aligning with the project’s requirements. This task enhanced my understanding of integrating Lambda functions with DynamoDB, particularly in maintaining data consistency across modules. <br> 
-                        <br>
-                        I also worked on the Messaging and Content module, implementing createMessage, reviewMessage, and checkCircumvention functions. These functions ensure messages are created, reviewed, and checked for any potential policy violations, 
-                        improving the platform’s communication processes. Additionally, I completed the checkMessageDetails function, which validates and processes detailed message content.</p>
+                      <p>As part of our onboarding at StraStan Solutions Corp, each trainee was assigned API Gateway endpoints to integrate with AWS Lambda, DynamoDB, and other AWS services.</p>
         
                       <h2>Understanding the Task</h2>
-                      <p>Alongside these, I developed the Notification System to provide real-time alerts triggered by various platform events. This experience strengthened my knowledge of event-driven processing using EventBridge 
-                        for event routing and Lambda for backend execution. <br>
+                      <p>This week, I worked on managing sections and subcategories in the Marketplace module and handling card 
+                        creation and reviews in the Cards module. These tasks required integrating API Gateway, Lambda functions, DynamoDB, SQS queues, 
+                        Cognito authentication, and EventBridge for event-driven processing. In the Marketplace module, I implemented endpoints for organizing 
+                        sections and setting display rules. The <b>POST /admin/sections/organize</b> endpoint, handled by the organizeContent Lambda function, structures 
+                        content dynamically and stores data in the Sections table. The <b>POST /admin/sections/display</b>  endpoint, powered by the setDisplayRules function, 
+                        manages visibility rules for sections. Additionally, I developed the <b>POST /admin/subcategories</b> endpoint, which allows subcategory creation under 
+                        specific categories, ensuring proper hierarchy in the Subcategories table.<br> 
                         <br>
-                        After finalizing these tasks, I prepared for potential revisions once the updated data structures are integrated into the project schema. Lastly, I began working on the encryption and decryption task assigned by Sir Jhoebert. 
-                        Although still in development, this task has introduced me to essential data security practices, including managing encryption keys and securing sensitive data.
+                        In the Cards module, I implemented the POST /cards endpoint, 
+                        using the createCard Lambda function to store metadata in the Cards table. I also worked on the <b>POST /admin/listings/review</b> endpoint, which
+                        allows admins to review listings through the reviewListing function, ensuring that status updates are processed efficiently. <br> 
                         <br> 
-                        <br>
-                        This week deepened my practical experience with AWS services, enhancing my skills in cloud application development, data management, and system security. As my training progresses, I aim to refine my understanding of cloud security and ensure 
-                        my contributions meet the high standards of StraStan Solutions Corps.</p>
+                        Throughout development, 
+                        I utilized AWS Lambda for backend logic, DynamoDB for structured storage, and API Gateway for seamless communication. SQS handled task queuing, 
+                        Cognito secured authentication, and EventBridge ensured smooth event tracking. By the end of the week, I aim to deepen my understanding of event-driven workflows 
+                        and API-driven architecture while enhancing system efficiency. This hands-on experience is valuable for my ongoing work at StraStan Solutions Corps.</p>
                   </div>
               </div>
           </section>
