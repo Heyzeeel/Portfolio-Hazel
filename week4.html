@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hazel Blog - Week 01</title>
+    <title>Hazel Blog - Week 03</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -53,46 +53,40 @@
 			</div>
 		</aside>
         <div id="colorlib-main">
-            <div class="hero-wrap" style="background-image: url(images/day1.jpg);">
+            <div class="hero-wrap" style="background-image: url(images/week4.png);">
                 <div class="overlay"></div>
                 <div class="hero-text">
-                    <h2><span class="category mb-1 d-block"><a href="#">Week 01</a></span></h2>
-                    <h1 class="mb-4">AWS, Next.js and Tailwind CSS</h1>
-                    <p class="meta"><span>February 3 - 7, 2025</span></p>  
+                    <h2><span class="category mb-1 d-block"><a href="#">Week 04</a></span></h2>
+                    <h1 class="mb-4">Next.js Frontend Development</h1>
+                    <p class="meta"><span>February 24 - 28, 2025</span></p>  
                 </div>
             </div>
             <section class="ftco-section article-container">
               <div class="container">
                   <div class="content">
-                      <p>The first week covered AWS-CDK fundamentals, including project setup, key concepts, and hands-on labs. Participants learned about infrastructure as code, debugging, and best practices for managing cloud resources. They also worked with AWS services such as Cognito for authentication, Lambda for serverless computing, DynamoDB for NoSQL databases, and SQS for message queuing. The week concluded with a hands-on lab where trainees built and deployed applications using AWS-CDK.</p>
+                      <p>In the fourth week of our training at StraStan Solutions Corps, we were divided into two groups to work on separate tasks. 
+                        Our team focused on implementing authentication using AWS Cognito and integrating it into our system. Irish and I were assigned to the frontend, while Alvin and Francis handled the backend.</p>
           
                       <!-- Image Slideshow -->
                       <div class="image-slider owl-carousel">
-                          <img src="images/day1_1.jpg" alt="Article Image" class="img-fluid">
-                          <img src="images/task.jpg" alt="AWS Cloud" class="img-fluid">
-                          <img src="images/day1_3.jpg" alt="AWS Cloud" class="img-fluid">
-                          <img src="images/day1_5.jpg" alt="AWS Cloud" class="img-fluid">
+                          <img src="images/week4.1.jpg" alt="Article Image" class="img-fluid">
+                          <img src="images/week4.2.jpg" alt="AWS Cloud" class="img-fluid">
+                          <img src="images/week4.3.jpg" alt="AWS Cloud" class="img-fluid">
                       </div>
           
-                      <p>As part of our onboarding at StraStan Solutions Corp, each trainee was assigned API Gateway endpoints to integrate with AWS Lambda, DynamoDB, and other AWS services.</p>
-        
-                      <h2>Understanding the Task</h2>
-                      <p>This week, I worked on managing sections and subcategories in the Marketplace module and handling card 
-                        creation and reviews in the Cards module. These tasks required integrating API Gateway, Lambda functions, DynamoDB, SQS queues, 
-                        Cognito authentication, and EventBridge for event-driven processing. In the Marketplace module, I implemented endpoints for organizing 
-                        sections and setting display rules. The <b>POST /admin/sections/organize</b> endpoint, handled by the organizeContent Lambda function, structures 
-                        content dynamically and stores data in the Sections table. The <b>POST /admin/sections/display</b>  endpoint, powered by the setDisplayRules function, 
-                        manages visibility rules for sections. Additionally, I developed the <b>POST /admin/subcategories</b> endpoint, which allows subcategory creation under 
-                        specific categories, ensuring proper hierarchy in the Subcategories table.<br> 
+                      <p>I continued working on encryption and decryption across all Lambda functions, ensuring data security within the system. Initially, 
+                         I encountered internal server errors and bad gateway issues while debugging, which slowed down progress. <br>
                         <br>
-                        In the Cards module, I implemented the POST /cards endpoint, 
-                        using the createCard Lambda function to store metadata in the Cards table. I also worked on the <b>POST /admin/listings/review</b> endpoint, which
-                        allows admins to review listings through the reviewListing function, ensuring that status updates are processed efficiently. <br> 
+                        After thorough troubleshooting, I discovered that the issue stemmed from referencing incorrect tables. For instance, I was mistakenly calling the "Sections" table 
+                        instead of the correct "Message" table for reviewMessage, preventing data from being properly processed. Once I corrected these references, all encryption functionalities 
+                        worked smoothly. <br>
                         <br> 
-                        Throughout development, 
-                        I utilized AWS Lambda for backend logic, DynamoDB for structured storage, and API Gateway for seamless communication. SQS handled task queuing, 
-                        Cognito secured authentication, and EventBridge ensured smooth event tracking. By the end of the week, I aim to deepen my understanding of event-driven workflows 
-                        and API-driven architecture while enhancing system efficiency. This hands-on experience is valuable for my ongoing work at StraStan Solutions Corps.</p>
+                        Alongside encryption, I successfully implemented the User System, including the logoutUser function and the corresponding User LOGOUT table. 
+                        While working on this functionality, I initially had some confusion regarding its purpose. However, after clarification from Sir Jhoebert, I confirmed that my implementation 
+                        aligned with the required schema and function. <br>
+                        <br> 
+                        This week provided valuable experience in troubleshooting AWS Lambda functions, debugging system errors, and reinforcing security measures 
+                        through encryption. Moving forward, I aim to further refine my debugging skills and enhance system efficiency, ensuring secure and reliable cloud-based solutions for StraStan Solutions Corps.</p>
                   </div>
               </div>
           </section>
